@@ -3,36 +3,40 @@
 
 <head>
 	<title>Contoso News</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/style.css" />
-	<script type="text/javascript" src="js/script.js"></script>
 </head>
 
-<body>
+<body class="container">
 
 	<header>
 		<h1>Contoso News:</h1>
 		<h2>On Time, On Topic:</h2>
 	</header>
 
-	<section id="carousel">
-		<figure class="visible">
-			<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/2b6ee80af3729d87e7646358317ea64e/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_efficient_cars.png" alt="Efficient Cars" />
-			<figcaption>2017 Cars Promise to be More Fuel Efficient Than Ever</figcaption>
-		</figure>
-		<figure>
-			<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/8e5447c85c1e385a0a35a6b992699a95/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_natural_disaster.png" alt="Natural Disaster" />
-			<figcaption>Hurricane Threatens to Touch Down on the East Coast This Weekend</figcaption>
-		</figure>
-		<figure>
-			<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/1f3925f56f63269f85453a6f0c46af7f/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_health_records.png" alt="Health Records" />
-			<figcaption>Many Doctors are Moving to Digital Health Records This Year</figcaption>
-		</figure>
+	<section id="carousel" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner" role="listbox">
+			<figure class="item active">
+				<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/2b6ee80af3729d87e7646358317ea64e/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_efficient_cars.png" alt="Efficient Cars" />
+				<figcaption class="carousel-caption">2017 Cars Promise to be More Fuel Efficient Than Ever</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/8e5447c85c1e385a0a35a6b992699a95/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_natural_disaster.png" alt="Natural Disaster" />
+				<figcaption class="carousel-caption">Hurricane Threatens to Touch Down on the East Coast This Weekend</figcaption>
+			</figure>
+			<figure class="item">
+				<img src="https://prod-edxapp.edx-cdn.org/assets/courseware/v1/1f3925f56f63269f85453a6f0c46af7f/asset-v1:Microsoft+DEV211.1x+1T2018+type@asset+block/mod4_health_records.png" alt="Health Records" />
+				<figcaption class="carousel-caption">>Many Doctors are Moving to Digital Health Records This Year</figcaption>
+			</figure>
+		</div>
 	</section>
 
-	<main>
+	<main class="row">
 		<h3>Latest Articles</h3>
 
-		<article>
+		<article class="well col-md-4">
 			<time datetime="16-01-2016">Friday, Jan 16</time>
 			<h4>International Story</h4>
 			<p>Curabitur pharetra luctus augue, non posuere orci tristique vel. Sed posuere nisi nec lacus ullamcorper, ac vulputate nisl consequat. Nullam sollicitudin nulla vel felis faucibus aliquam. Nunc sit amet velit orci. Proin sed orci fringilla, elementum
@@ -40,7 +44,7 @@
 				a volutpat nibh sollicitudin. Nullam sagittis sollicitudin urna, sed sollicitudin mauris ornare id. <a href="#" target="_blank">Read more...</a></p>
 		</article>
 
-		<article>
+		<article class="well col-md-4">
 			<time datetime="14-01-2016">Wednesday, Jan 14</time>
 			<h4>Finance Story</h4>
 			<p>Nullam tempor mi at libero elementum varius. Sed lobortis lacus feugiat est tristique, nec imperdiet turpis scelerisque. Ut sed urna malesuada, scelerisque dui sit amet, tempus mauris. Integer bibendum egestas urna, a bibendum sem gravida quis. Cras
@@ -54,7 +58,7 @@
 				Sed eget ante gravida, rhoncus velit eu, tempus quam. Sed fermentum at odio sed commodo. Fusce lobortis cursus purus, quis consequat est faucibus at. Etiam massa felis, sodales at sodales sed, iaculis quis arcu. <a href="#" target="_blank">Read more...</a></p>
 		</article>
 
-		<article>
+		<article class="well col-md-4">
 			<time datetime="14-01-2016">Wednesday, Jan 14</time>
 			<h4>Technolgy Story</h4>
 			<p>Morbi eget justo ut velit dapibus malesuada. Nunc elementum, neque quis convallis tempus, lacus ante tristique est, id porta tortor leo eget orci. Suspendisse hendrerit interdum lacus et condimentum. Mauris at ex dignissim, bibendum libero at, fermentum
@@ -63,19 +67,18 @@
 		</article>
 	</main>
 
-	<h4>Sign Up For Our Emails</h4>
-
-	<summary>
-		<form>
-			<label>E-mail Address: </label>
-			<input type="email" id="userEmail" required="required">
+	<summary class="panel panel-default col-md-8 col-md-offset-2">
+		<div class="panel-heading">Sign Up For Our Emails</div>
+		<form class="form-horizontal panel-body">
+			<label>E-Mail Address: </label>
+			<input type="text" required="required" />
 			<label>Delivery Preference: </label>
-			<select id="deliveryPreferences">
-				<option name="daily">Daily</option>
-				<option name="weekly">Weekly</option>
-				<option name="monthly">Monthly</option>
-			</select>
-			<input type="submit" value="Sign up" />
+			<select>
+        <option>Daily</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+    </select>
+			<input type="submit" value="Sign-Up" />
 		</form>
 	</summary>
 </body>
