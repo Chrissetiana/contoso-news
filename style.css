@@ -53,7 +53,7 @@ article {
     article a {
         color: #314052;
     }
-	main > h3 {
+		main > h3 {
         font-size: 2em;
     }
 }
@@ -70,8 +70,8 @@ article {
     header h2 {
         display: none;
     }
-  }
 }
+
 section#carousel > figure > img {
 	display: none;
 	margin: 0px auto;
